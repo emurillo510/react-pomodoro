@@ -10,11 +10,23 @@ class PomodoroTimerComponent extends Component {
 
   constructor(props) {
     super(props);
+    this.clockControlHandler = this.clockControlHandler.bind(this);
+    this.clockInitializerHandler = this.clockInitializerHandler.bind(this);
     this.state = {
       initialTime : 60*25,
       timeControlStatus: "STOPPED"
     }
 
+  }
+
+  clockControlHandler(e) {
+    console.log("clock control changed");
+    console.log(e);
+  }
+
+  clockInitializerHandler(e) {
+    console.log("set clocks initial time here");
+    console.log(e);
   }
 
   
@@ -24,9 +36,9 @@ class PomodoroTimerComponent extends Component {
     return (
       <div id="pomodoro-timer-component">
         {this.state.timeControlStatus} 
-        <PomodoroTimerInitializer/>
+        <PomodoroTimerInitializer initializeTime={this.clockInitializerHandler}/>
         <PomodoroTimerClock initialTime={this.state.initialTime}/>
-        <PomodoroTimerControl/>
+        <PomodoroTimerControl clockControlSet={this.clockControlHandler}/>
       </div> 
     );
 

@@ -13,16 +13,17 @@ class PomodoroTimerInitializer extends Component {
 
   pomodoroHandler(e) {
     console.log("pomodoro");
+    this.props.initializeTime("pomodoro");
   }
 
   shortBreakHandler(e) {
-
     console.log("short break");
+    this.props.initializeTime("short break");
   }
 
   longBreakHandler(e) {
-
     console.log("long break");
+    this.props.initializeTime("long break");
   }
 
   render() {
