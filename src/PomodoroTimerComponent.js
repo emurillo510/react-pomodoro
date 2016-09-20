@@ -6,12 +6,20 @@ import PomodoroTimerControl from './PomodoroTimerControl';
 
 class PomodoroTimerComponent extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      initialTime : 60*25
+    }
+
+  }
+
   render() {
 
     return (
       <div id="pomodoro-timer-component">
         <PomodoroTimerInitializer/>
-        <PomodoroTimerClock/>
+        <PomodoroTimerClock initialTime={this.state.initialTime}/>
         <PomodoroTimerControl/>
       </div> 
     );
