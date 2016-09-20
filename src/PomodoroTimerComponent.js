@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+
+import PomodoroTimerInitializer from './PomodoroTimerInitializer';
+import PomodoroTimerClock from './PomodoroTimerClock';
 import PomodoroTimerControl from './PomodoroTimerControl';
 
 class PomodoroTimerComponent extends Component {
@@ -7,6 +10,8 @@ class PomodoroTimerComponent extends Component {
 
     return (
       <div id="pomodoro-timer-component">
+        <PomodoroTimerInitializer/>
+        <PomodoroTimerClock/>
         <PomodoroTimerControl/>
       </div> 
     );
