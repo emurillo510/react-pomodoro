@@ -4,16 +4,12 @@ class PomodoroTimerClock extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      initialTime : this.props.initialTime
-    }
-
   }
 
   render() {
 
-    let min = this.state.initialTime / 60;
-    let seconds = this.state.initialTime % 60;
+    let min = this.props.initialTime / 60;
+    let seconds = this.props.initialTime % 60;
 
     return (
 

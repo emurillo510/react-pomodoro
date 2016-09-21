@@ -13,17 +13,14 @@ class PomodoroTimerControl extends Component {
   }
 
   startHandler() {
-    console.log("start");
     this.props.clockControlSet("start");
   }
 
   stopHandler() {
-    console.log("stop");
     this.props.clockControlSet("stop");
   }
 
   resetHandler() {
-    console.log("reset");
     this.props.clockControlSet("reset");
   }
 

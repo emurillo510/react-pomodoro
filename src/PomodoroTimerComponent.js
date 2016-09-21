@@ -25,8 +25,21 @@ class PomodoroTimerComponent extends Component {
   }
 
   clockInitializerHandler(e) {
-    console.log("set clocks initial time here");
-    console.log(e);
+    console.log("set clocks initial time here using: " + e);
+    switch(e) {
+      case "pomodoro":
+        this.setState({initialTime: 60*25});
+        break;
+      case "short break":
+        this.setState({initialTime: 60*5});
+        break;
+      case "long break":
+        this.setState({initialTime: 60*10});
+        break;
+      default:
+    }
+    console.log("initial time is: " + this.state.initialTime);
+
   }
 
   
